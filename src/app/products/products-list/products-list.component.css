@@ -1,0 +1,81 @@
+
+.homepage{
+  background-color: rgb(244,249,252);
+    margin-left: 220px;
+}
+
+.flex-container {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  }
+  .flex-container > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Container needed to position the button. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    width: 100%;
+ 
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container .btn {
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+
+
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: absolute;
+    height: 100%;
+  
+  }
+
+  
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  h4{
+      padding: 16px;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    color: blue;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    color: blue;
+  }
+  
+  
+  
+
+  
