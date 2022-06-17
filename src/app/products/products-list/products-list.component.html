@@ -1,8 +1,14 @@
 <div class="sidebar">
     <h4>Products</h4>
-    <a class="active" href="#home">All()</a>
-    <a href="#news">Simple Tools()</a>
-    <a href="#contact">Complex Tools()</a>
+    <!-- <a class="active" (click)="getProdsByCategory()">All({{AllprodCount}})</a>
+    <div *ngFor="let item of categs">
+        <a  (click)="getProdsByCategory()">{{item}} Tools({{AllprodCount}})</a>
+
+    </div> -->
+
+    <a class="active" (click)="getAllProds()">All({{AllprodCount}})</a>
+    <a (click)="getSimpleProds()">Simple Tools({{SimpleProdCount}})</a>
+    <a (click)="getComplexProds()">Complex Tools({{ComplexProdCount}})</a>
 </div>
 
 
@@ -35,3 +41,9 @@
 
     </div>
 </div>
+
+
+
+
+
+
