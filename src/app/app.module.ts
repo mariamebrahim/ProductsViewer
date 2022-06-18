@@ -7,7 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsModule } from './products/products.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpCacheService } from './cache.service';
+import {cacheInterceptor} from './Interceptors/cache.Interceptor';
 
 
 
@@ -26,7 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass:cacheInterceptor,
+      multi:true
+    },
+    HttpCacheService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
