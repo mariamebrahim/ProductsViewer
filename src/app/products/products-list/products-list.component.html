@@ -28,19 +28,29 @@
 
 
     <div class="flex-container">
-        <div  *ngFor="let item of prods" class="card" style="width: 18rem;">
-            <div class="container">
-                <a (click)="getProductByID(item.id)" href="#" class="btn btn-primary" >Sync</a>
-                <img class="card-img-top" src={{item.imageUrl}}  alt="Card image cap">
-            </div>
-            <div class="card-body" style="background-color: rgb(226, 225, 225);">
-                <h5 class="card-title">{{item.name}}</h5>
-                <p class="card-text">${{item.price}}</p>  
-            </div>
+        <div  *ngFor="let item of prods" class="card" style="width: 18rem;" href="">
+          
+                <div class="container" >
+                    <a (click)="getProductByID(item.id)" href="#" class="btn btn-primary" >Sync</a>
+                   
+                    <img class="card-img-top" src={{item.imageUrl}}  alt="Card image cap">
+           
+                </div>
+                <a [routerLink]="['/details',item.id-1]">
+                <div class="card-body" style="background-color: rgb(226, 225, 225);">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">${{item.price}}</p>  
+                </div>
+            </a>
+           
+
+            
         </div>
+    
 
     </div>
 </div>
+
 
 
 

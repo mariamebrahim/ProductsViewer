@@ -10,6 +10,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpCacheService } from './cache.service';
 import {cacheInterceptor} from './Interceptors/cache.Interceptor';
+import { RouterModule } from '@angular/router';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -19,6 +21,7 @@ import {cacheInterceptor} from './Interceptors/cache.Interceptor';
     AppComponent,
     HeaderComponent,
     SidebarComponent,
+    NotfoundComponent,
 
   ],
   imports: [
@@ -26,7 +29,8 @@ import {cacheInterceptor} from './Interceptors/cache.Interceptor';
     AppRoutingModule,
     FormsModule,
     ProductsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     {
