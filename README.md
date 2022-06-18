@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
+## Description
+In this Project You Can :
+- Get a list of products.
+- Cache the products list at the first time the user opens the website.
+- The global yellow sync button sync the products list.
+- The product sync blue button sync that specific product only.
+- At the sidebar all categories' names are listed and the user can filter the products list
+  by clicking the category name.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
