@@ -12,6 +12,7 @@ import { Product } from 'src/app/_models/product';
 export class ProductsListComponent implements OnInit {
 
   constructor(public prodSer:ProductService) { }
+  prod=new Product(0,"","","",0);
   prods:Product[]=[];
   categs:string[]=[];
   AllprodCount:number=0;
@@ -47,6 +48,17 @@ export class ProductsListComponent implements OnInit {
     }); 
   }
 
+  getProductByID(id:number){
+    return this.prodSer.getProductbyID(id).subscribe(a=>{
+      this.prods[id-1]=a;
+    }); 
+  }
+  syncAllProducts(){
+    this.prodSer.getAllProducts().subscribe(a=>{
+      this.prods=a;
+    }); 
+
+  }
 
   getProdsCountByCategory(category:string){
     return this.prods.filter(a=>a.category==category).length;

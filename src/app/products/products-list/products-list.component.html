@@ -21,7 +21,7 @@
 
         </div>
         <div class="col-lg-2" style="margin:10px 100px">
-            <button class="btn btn-warning" style="width: 200px;">Sync</button>
+            <button (click)="syncAllProducts()" class="btn btn-warning" style="width: 200px;">Sync</button>
         </div>
     </div>
 
@@ -30,8 +30,8 @@
     <div class="flex-container">
         <div  *ngFor="let item of prods" class="card" style="width: 18rem;">
             <div class="container">
-                <a href="#" class="btn btn-primary">Sync</a>
-                <img class="card-img-top" src={{item.imageUrl}} alt="Card image cap">
+                <a (click)="getProductByID(item.id)" href="#" class="btn btn-primary" >Sync</a>
+                <img class="card-img-top" src={{item.imageUrl}}  alt="Card image cap">
             </div>
             <div class="card-body" style="background-color: rgb(226, 225, 225);">
                 <h5 class="card-title">{{item.name}}</h5>

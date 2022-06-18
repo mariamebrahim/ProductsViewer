@@ -6,12 +6,16 @@ import { Product } from './_models/product';
   providedIn: 'root'
 })
 export class ProductService {
-  baseurl="https://captello.firebaseio.com/products.json";
+  baseurl="https://captello.firebaseio.com/products";
 
   getAllProducts(){
-    return this.http.get<Product[]>(this.baseurl)
+    return this.http.get<Product[]>(this.baseurl+".json")
   }
 
+  getProductbyID(id:number){
+    return this.http.get<Product>(this.baseurl+"/"+id+".json");
+
+  }
 
 
   constructor(public http:HttpClient) { }
